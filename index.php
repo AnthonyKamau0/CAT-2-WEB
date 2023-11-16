@@ -3,7 +3,6 @@ include('configs/constants.php');
 include('configs/DbConn.php');
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,7 @@ include('configs/DbConn.php');
 <body>
   <div class="container">
     <h2>Author Details Form</h2>
-    <form action="processes/AutRegistration.php" method="post">
+    <form action="processes/AutRegistration.php" method="post" onsubmit="return validateForm()">
       <div class="form-group">
         <label for="authorFullName">Author Full Name:</label>
         <input type="text" class="form-control" id="authorFullName" name="authorFullName" required>
@@ -51,6 +50,25 @@ include('configs/DbConn.php');
 
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <script>
+      function validateForm() {
+        var fullName = document.getElementById('authorFullName').value;
+        var email = document.getElementById('authorEmail').value;
+        var address = document.getElementById('authorAddress').value;
+        var Biography = document.getElementById('authorBiography').value;
+        var DateOfBirth = document.getElementById('authorDateOfBirth').value;
+        var Suspended = document.getElementById('authorSuspended').value;
+        if (fullName === '' || email === ''||address === '' || Biography === ''||DateOfBirth === '' || Suspended === '') {
+          alert('Please fill in all required fields.');
+          return false; // Prevent form submission
+        }
+
+        // Add more validation logic if needed
+
+        return true; // Allow form submission
+      }
+    </script>
   </div>
 </body>
 </html>
