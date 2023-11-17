@@ -6,7 +6,7 @@ include('../configs/DbConn.php');
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Collect form data
+    // Collect form data #author
     $authorFullName = $_POST['authorFullName'];
     $authorEmail = $_POST['authorEmail'];
     $authorAddress = $_POST['authorAddress'];
