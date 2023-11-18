@@ -43,8 +43,8 @@ include('configs/DbConn.php');
       <div class="form-group">
         <label for="authorSuspended">Author Suspended:</label>
         <select class="form-control" id="authorSuspended" name="authorSuspended">
-          <option value="0">No</option>
-          <option value="1">Yes</option>
+          <option value="False">No</option>
+          <option value="True">Yes</option>
         </select>
       </div>
 

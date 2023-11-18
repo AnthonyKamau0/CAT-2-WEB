@@ -103,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-group">
                 <label for="updatedSuspended">Author Suspended:</label>
                 <select class="form-control" id="updatedSuspended" name="updatedSuspended">
-                    <option value="0" <?php echo ($author['AuthorSuspended'] == 0) ? 'selected' : ''; ?>>No</option>
-                    <option value="1" <?php echo ($author['AuthorSuspended'] == 1) ? 'selected' : ''; ?>>Yes</option>
+                    <option value="False" <?php echo ($author['AuthorSuspended'] == False) ? 'selected' : ''; ?>>False</option>
+                    <option value="True" <?php echo ($author['AuthorSuspended'] == True) ? 'selected' : ''; ?>>True</option>
                 </select>
             </div>
 

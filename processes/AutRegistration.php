@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $authorAddress = $_POST['authorAddress'];
     $authorBiography = $_POST['authorBiography'];
     $authorDateOfBirth = $_POST['authorDateOfBirth'];
-    $authorSuspended = isset($_POST['authorSuspended']) ? 1 : 0;
+    $authorSuspended = isset($_POST['authorSuspended']) ? True : False;
 
     // Validate form data
     if (empty($authorFullName)) {
