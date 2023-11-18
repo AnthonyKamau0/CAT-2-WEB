@@ -43,8 +43,8 @@ include('configs/DbConn.php');
       <div class="form-group">
         <label for="authorSuspended">Author Suspended:</label>
         <select class="form-control" id="authorSuspended" name="authorSuspended">
-          <option value="False">No</option>
-          <option value="True">Yes</option>
+          <option value="False">False</option>
+          <option value="True">True</option>
         </select>
       </div>
 
@@ -63,9 +63,6 @@ include('configs/DbConn.php');
           alert('Please fill in all required fields.');
           return false; // Prevent form submission
         }
-
-        // Add more validation logic if needed
-
         return true; // Allow form submission
       }
     </script>

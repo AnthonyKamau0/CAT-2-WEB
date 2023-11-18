@@ -22,9 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($authorEmail)) {
         $errors[] = 'Author Email is required.';
     }
-
-    // Add similar validation for other required fields
-
     if (empty($errors)) {
         try {
             // Insert data into the database

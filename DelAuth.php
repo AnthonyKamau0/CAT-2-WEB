@@ -26,7 +26,6 @@ if (isset($_GET['id'])) {
         exit;
     }
 } else {
-    // Display message if no author ID is provided in the URL.
     // This should not be visible in production; it's for debugging purposes.
     echo "Author ID not provided in the URL.";
     exit;

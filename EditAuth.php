@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $updateStmt->execute();
 
-        echo "Author updated successfully"; // You can redirect or provide a response as needed
+        echo "Author updated successfully";
     } catch (PDOException $e) {
         echo "Error updating author: " . $e->getMessage();
     }
