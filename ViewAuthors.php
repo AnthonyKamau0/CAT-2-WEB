@@ -24,6 +24,10 @@ if (!$result) {
 <body>
     <div class="container">
         <h2>View Authors</h2>
+
+                <!-- Add a link to index.php -->
+                <a href="index.php" class="btn btn-primary">Go to Author Form</a>
+                
         <table class="table">
             <thead>
                 <tr>

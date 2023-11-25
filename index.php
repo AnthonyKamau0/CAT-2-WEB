@@ -12,8 +12,15 @@ include('configs/DbConn.php');
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container">
+<div class="container d-flex justify-content-between align-items-center">
     <h2>Author Details Form</h2>
+
+    <!-- Add a link to viewauthor.php with Bootstrap classes -->
+    <a href="ViewAuthors.php" class="btn btn-link">View Authors</a>
+  </div>
+
+  <div class="container">
+  <div class="container">
     <form action="processes/AutRegistration.php" method="post" onsubmit="return validateForm()">
       <div class="form-group">
         <label for="authorFullName">Author Full Name:</label>
