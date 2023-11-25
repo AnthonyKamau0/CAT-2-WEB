@@ -34,7 +34,7 @@ CREATE TABLE `authorstb` (
   `AuthorAddress` varchar(225) NOT NULL,
   `AuthorBiography` text NOT NULL,
   `AuthorDateOfBirth` date NOT NULL,
-  `AuthorSuspended` enum('True','False') NOT NULL
+  `AuthorSuspended` boolean() NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --

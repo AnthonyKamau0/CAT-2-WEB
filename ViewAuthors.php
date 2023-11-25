@@ -7,7 +7,7 @@ $sql = "SELECT * FROM Authorstb ORDER BY AuthorFullName ASC";
 $result = $DbConn->query($sql);
 
 if (!$result) {
-    echo "Error retrieving authors: " . $DbConn->error;
+    echo "Error retrieving authors: " ;
 } else {
     $authors = $result->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -35,7 +35,6 @@ if (!$result) {
                     <th scope="col">AuthorDateOfBirth</th>
                     <th scope="col">AuthorSuspended</th>
                     <th scope="col">Actions</th>
-                    <!-- Add more columns as needed -->
                 </tr>
             </thead>
             <tbody>
@@ -49,14 +48,13 @@ if (!$result) {
                         <td><?php echo $author['AuthorDateOfBirth']; ?></td>
                         <td><?php echo $author['AuthorSuspended']; ?></td>
                         <td>
-                            <!-- Edit button linking to dynamic edit file -->
+                            <!-- Edit button linking to the edit file -->
                             <a href="EditAuth.php?id=<?php echo $author['AuthorId']; ?>" class="btn btn-warning">Edit</a>
 
-                            <!-- Delete button linking to dynamic delete file -->
+                            <!-- Delete button linking to the delete file -->
                             <a href="DelAuth.php?id=<?php echo $author['AuthorId']; ?>" class="btn btn-danger">Delete</a>
                         </td>
                         </td>
-                        <!-- Add more cells as needed -->
                     </tr>
                 <?php endforeach; ?>
             </tbody>

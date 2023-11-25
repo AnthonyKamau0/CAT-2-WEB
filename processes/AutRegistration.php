@@ -12,7 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $authorAddress = $_POST['authorAddress'];
     $authorBiography = $_POST['authorBiography'];
     $authorDateOfBirth = $_POST['authorDateOfBirth'];
-    $authorSuspended = isset($_POST['authorSuspended']) ? True : False;
+    
+    // Convert boolean to string
+    $authorSuspended = isset($_POST['authorSuspended']) ? 'True' : 'False';
 
     // Validate form data
     if (empty($authorFullName)) {
@@ -22,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($authorEmail)) {
         $errors[] = 'Author Email is required.';
     }
+
     if (empty($errors)) {
         try {
             // Insert data into the database
@@ -35,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $stmt->execute();
 
-            echo "Author registration successful"; // You can redirect or provide a response as needed
+            echo "Author registration successful";
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
@@ -49,5 +52,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "Invalid request method";
 }
-
 ?>
