@@ -23,10 +23,11 @@ if (!$result) {
 </head>
 <body>
     <div class="container">
-        <h2>View Authors</h2>
-
-                <!-- Add a link to index.php -->
-                <a href="index.php" class="btn btn-primary">Go to Author Form</a>
+        <h2 class="d-flex justify-content-between align-items-center">
+            View Authors
+            <!-- Add a link to index.php with Bootstrap classes -->
+            <a href="index.php" class="btn btn-primary">Go to Author Form</a>
+        </h2>
                 
         <table class="table">
             <thead>
